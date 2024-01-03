@@ -55,12 +55,10 @@ class CubeClass:
         self._color4fv = color4fv
 
     def createAnimation(self, newp, timeS):
-        # TODO: Optimize this calculation so it only runs once
         if not self._inAnimation:
             self._movementMultipliers[0] = ((newp[0] - self._cubePosition[0]) / timeS) / 100
             self._movementMultipliers[1] = ((newp[1] - self._cubePosition[1]) / timeS) / 100
             self._movementMultipliers[2] = ((newp[2] - self._cubePosition[2]) / timeS) / 100
-            print(self._movementMultipliers)
             self._inAnimation = True
 
         # Warning: Can be skipped due to memory problems
